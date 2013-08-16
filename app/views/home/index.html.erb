@@ -1,0 +1,20 @@
+
+<div class="slideshow">
+  <div class="row">
+  <div class="pbn">
+  <%= image_tag "pbn.png" %>
+</div>
+</div>
+</div>
+<div class="blogheader "></div>
+<div class="bloglist">
+<% @pages.live.each do |p| %>
+
+        <ul class="right small-block-grid-2 large-block-grid-4">
+          <li class=""></li>
+          <li class=""><li><a><%= p.title %></a></li>  <a><%# p.content_for(:body) %></a></li>
+        </ul>
+
+<%end%>
+      </div>
+
