@@ -52,7 +52,8 @@ gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.gi
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-videojs'
-#gem 'refinerycms-mailchimp', :git => 'git@github.com:wirelab/refinerycms-mailchimp', :branch => 'refinery-2.0'
+gem 'refinerycms-mailchimp', :git => 'https://github.com/wirelab/refinerycms-mailchimp.git', :branch => 'refinery-2.0'
+#gem 'refinerycms-mailchimp'
 #  gem 'refinerycms-blog', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
