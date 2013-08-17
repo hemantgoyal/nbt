@@ -4,11 +4,11 @@ gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'sqlite3'
 
 gem 'pg'
 
 group :development, :test do
-gem 'sqlite3'
 
 #  gem 'sqlite3'
 #  gem 'activerecord-sqlite3-adapter'
