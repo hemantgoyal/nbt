@@ -1,13 +1,5 @@
-development:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  username: user
-  database: development
-
 production:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  username: user
-  database: production
+  adapter: sqlite3
+  database: db/production.sqlite3
+  pool: 5
+  timeout: 5000
