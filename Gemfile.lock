@@ -43,16 +43,6 @@ GIT
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.0.10)
 
-GIT
-  remote: git://github.com/wirelab/refinerycms-mailchimp.git
-  revision: 67de4d2c5d1fb0c8c20f7bb372dd868243a911b3
-  branch: refinery-2.0
-  specs:
-    refinerycms-mailchimp (0.1.0)
-      hominid (~> 3.0)
-      refinerycms-core (~> 2.0.8)
-      refinerycms-settings (~> 2.0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -129,7 +119,6 @@ GEM
       paper_trail (~> 2)
     highline (1.6.19)
     hike (1.2.3)
-    hominid (3.0.5)
     i18n (0.6.5)
     journey (1.0.4)
     jquery-rails (2.0.3)
@@ -185,9 +174,6 @@ GEM
     refinerycms-i18n (2.0.2)
       refinerycms-core (~> 2.0.0)
       routing-filter (>= 0.2.3)
-    refinerycms-settings (2.0.3)
-      acts_as_indexed (~> 0.7.7)
-      refinerycms-core (~> 2.0.10)
     refinerycms-videojs (0.5.5.1)
       dragonfly
       rack-cache
@@ -244,7 +230,6 @@ DEPENDENCIES
   rails (= 3.2.14)
   refinerycms (~> 2.0.0)!
   refinerycms-i18n (~> 2.0.0)
-  refinerycms-mailchimp!
   refinerycms-videojs
   rvm-capistrano
   sass-rails (~> 3.2.3)
