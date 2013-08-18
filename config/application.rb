@@ -8,7 +8,7 @@ require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
-Bundler.require(:default, Rails.env) if defined?(Bundler)
+#Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -64,7 +64,7 @@ module Nabblog1
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.paths << "#{Rails.root}/shared/assets"
+#    config.assets.paths << "#{Rails.root}/shared/assets"
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
