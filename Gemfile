@@ -41,7 +41,7 @@ gem 'zurb-foundation'
 # Deploy with Capistrano
  gem 'capistrano'
  gem "rvm-capistrano"
-
+gem "psych"
 # To use debugger
 # gem 'debugger'
 
