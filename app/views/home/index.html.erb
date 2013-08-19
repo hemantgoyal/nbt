@@ -12,7 +12,7 @@
 <% @pages.live.each do |p| %>
 
         <ul class="left large-4">
-          <h3><a><%= link_to p.title, "/blog/"+p.slug %></a></h3><br />
+          <h4><a><%= link_to p.title, "/blog/"+p.slug %></a></h4><br />
           <%= truncate p.content_for(:body).html_safe, :length => 150 %>
         </ul>
 
