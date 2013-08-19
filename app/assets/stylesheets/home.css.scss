@@ -22,12 +22,15 @@ li {
   margin: 35px auto auto;  
 }
 
-.bloglist .divider {
-  border-bottom: none;
-border-top: none;
-border-right: solid 1px #2B2B2B;
-border-left: solid 1px black;
-clear: none;
-height: 45px;
-width: 0px;
+.blog-block {
+border: 1px solid #e1e1e1;
+padding: 10px;
+-moz-box-shadow: 2px 2px 1px #e1e1e1;
+-webkit-box-shadow: 2px 2px 1px #e1e1e1;
+box-shadow: 2px 2px 1px #e1e1e1;
+}
+
+.social-api {
+background: whiteSmoke;
+padding: 5px;
 }

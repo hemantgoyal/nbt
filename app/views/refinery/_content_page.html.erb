@@ -1,7 +1,11 @@
 <div class="row">
-<%= render_content_page(@page, {
-      :hide_sections => local_assigns[:hide_sections],
-      :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
-    }) %>
+  <div class="social-api right">
+    <%= social_share_button_tag(@page.title) %>
   </div>
+
+  <%= render_content_page(@page, {
+    :hide_sections => local_assigns[:hide_sections],
+    :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
+  }) %>
+</div>
 <%= render '/refinery/draft_page_message' unless @page.nil? or @page.live? -%>

@@ -57,3 +57,7 @@ gem 'refinerycms-mailchimp', :git => 'https://github.com/wirelab/refinerycms-mai
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 #  gem 'refinerycms-page-images', '~> 2.0.0'
+
+gem 'truncate_html'
+gem 'social-share-button'
+

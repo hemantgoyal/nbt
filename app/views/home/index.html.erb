@@ -1,20 +1,39 @@
 
 <div class="slideshow">
   <div class="row">
-  <div class="pbn">
-  <%= image_tag "pbn.png" %>
-</div>
-</div>
+    <div class="pbn">
+      <%= image_tag "pbn.png" %>
+    </div>
+  </div>
 </div>
 <div class="large-12 columns">
-<div class="docs header"> <h2>Latest Reviews</h2></div>
-<div class="bloglist">
-<% @pages.live.each do |p| %>
+  <div class="docs header">
+    <h2>Latest Blogs</h2>
+  </div>
+  <ul class="left small-block-grid-1 large-block-grid-3">
+    <% @top_pages.each do |p| %>
+    <li class="">
+      <div class="blog-block">
+        <h4><a><%= link_to p.title, "/blog/"+p.slug %></a></h4>
+        <% content = sanitize(p.content_for(:body).to_s) %>
+        <%= truncate_html(content, :length => 150)  %><%= link_to "Read more", "/blog/"+p.slug %>
+      </div>
+    </li>
+    <%end%>
+  </ul>
+    <ul class="left large-12 columns">
+    <% @bottom_pages.each do |p| %>
+    <li class="">
+      <div class="blog-block">
+        <h4><a><%= link_to p.title, "/blog/"+p.slug %></a></h4>
+        <% content = sanitize(p.content_for(:body).to_s) %>
+        <%= truncate_html(content, :length => 150)  %><%= link_to "Read more", "/blog/"+p.slug %>
+              <div class="social-api right">
+      <%= social_share_button_tag(p.title) %>
+    </div>
 
-        <ul class="left small-block-grid-2 large-block-grid-4 large-4">
-          <h4><a><%= link_to p.title, "/blog/"+p.slug %></a></h4><br />
-          <%= truncate p.content_for(:body).html_safe, :length => 150 %>
-        </ul>
-
-<%end%>
+      </div>
+    </li>
+    <%end%>
+  </ul>
 </div>

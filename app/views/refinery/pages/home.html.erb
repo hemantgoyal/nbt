@@ -1,4 +1,5 @@
 <%= render '/refinery/content_page' %>
 <% @pages.live.each do |p| %>
   <li><a><%= p.title %></a></li>
+  <li><a><%= p.content_for(:body) %></a></li>
 <%end%>
