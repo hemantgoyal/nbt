@@ -143,6 +143,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.24)
     multi_json (1.7.9)
+    mysql2 (0.3.13)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -244,6 +245,7 @@ DEPENDENCIES
   compass-rails
   execjs
   jquery-rails (~> 2.0.0)
+  mysql2
   pg
   psych
   rails (= 3.2.14)
