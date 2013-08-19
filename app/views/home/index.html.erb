@@ -15,7 +15,8 @@
 
         <ul class="right small-block-grid-2 large-block-grid-4 small-4">
           <li class=""></li>
-          <li class=""><li><a><%= link_to p.title, "/blog/"+p.title.gsub(/\s/, "-") %></a></li>  <a><%# p.content_for(:body) %></a></li>
+          <li class=""><h3><a><%= link_to p.title, "/blog/"+p.slug %></a></h3></li><br />
+          <%= truncate p.content_for(:body).html_safe, :length => 150 %>
         </ul>
 
 <%end%>
