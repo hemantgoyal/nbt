@@ -7,19 +7,14 @@
 </div>
 </div>
 <div class="large-12 columns">
-  <div class="large-4 columns"></div>
-  <div class="large-8 columns">
 <div class="docs header"> <h2>Latest Reviews</h2></div>
 <div class="bloglist">
 <% @pages.live.each do |p| %>
 
-        <ul class="right small-block-grid-2 large-block-grid-4 small-4">
-          <li class=""></li>
-          <li class=""><h3><a><%= link_to p.title, "/blog/"+p.slug %></a></h3></li><br />
+        <ul class="left large-4">
+          <h3><a><%= link_to p.title, "/blog/"+p.slug %></a></h3><br />
           <%= truncate p.content_for(:body).html_safe, :length => 150 %>
         </ul>
 
 <%end%>
-      </div>
-    </div>
 </div>
