@@ -11,7 +11,7 @@
 <div class="bloglist">
 <% @pages.live.each do |p| %>
 
-        <ul class="left large-4">
+        <ul class="left small-block-grid-2 large-block-grid-4 large-4">
           <h4><a><%= link_to p.title, "/blog/"+p.slug %></a></h4><br />
           <%= truncate p.content_for(:body).html_safe, :length => 150 %>
         </ul>
