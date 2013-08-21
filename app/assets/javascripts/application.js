@@ -20,6 +20,9 @@
 //= require_tree .
 
 $(document).ready(function() {
+  $("#subscribe_submit").on("click", function() {
+    $(this).trigger('click');
+  });
   
 });
 $(document).foundation();

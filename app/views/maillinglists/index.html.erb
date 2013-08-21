@@ -1,0 +1,23 @@
+<h1>Listing maillinglists</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @maillinglists.each do |maillinglist| %>
+  <tr>
+    <td><%= maillinglist.email %></td>
+    <td><%= link_to 'Show', maillinglist %></td>
+    <td><%= link_to 'Edit', edit_maillinglist_path(maillinglist) %></td>
+    <td><%= link_to 'Destroy', maillinglist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Maillinglist', new_maillinglist_path %>

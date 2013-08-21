@@ -61,21 +61,34 @@
 
           </style>
           <div id="mc_embed_signup" class="large-12 columns hide-for-small">
-            <form action="http://udproducts.us7.list-manage.com/subscribe/post?u=8e6646b5fd5bcb18a7c473965&amp;id=1c62236664" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<!--            <form action="http://udproducts.us7.list-manage.com/subscribe/post?u=8e6646b5fd5bcb18a7c473965&amp;id=1c62236664" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+             <% @mailinglist = Maillinglist.new %>
+-->          <%= form_tag("/maillinglists", remote: true, validate: true)  do %>
               <div class="row collapse">
                 <div class="small-10 large-7 columns left">
-                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+<!--                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+-->                   <%= email_field_tag "maillinglist[email]", nil, :placeholder => "Email Address", :required => true %>
                 </div>
                 <div class="small-2 large-5 columns left ">
-                  <input type="submit" value="Subscribe" name="subscribe" id="" class="postfix radius">
+<!--                  <input type="submit" value="Subscribe" name="subscribe" id="" class="postfix radius">
+-->                   <%= submit_tag "Subscribe", :id => "subscribe_submit", :class => "postfix" %>
                 </div>
               </div>
+              
+              <div id="subscribe_thankyou" class="reveal-modal xlarge">
+                <h2>Awesome.</h2>
+                <p class="lead">Subscription successfully.</p>
+                <p>We will send the latest posts right to your inbox, stay tuned!</p>
+                <a class="close-reveal-modal">&#215;</a>
+              </div>
+              
 
               <div id="mce-responses" class="clear">
                 <div class="response" id="mce-error-response" style="display:none"></div>
                 <div class="response" id="mce-success-response" style="display:none"></div>
               </div>
-            </form>
+<!--            </form>
+-->         <% end %>
           </div>
 
           <!-- Right Nav Section
