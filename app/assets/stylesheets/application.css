@@ -10,7 +10,15 @@
  *
  *= require_self
  *= require foundation_and_overrides
- *= require_tree .
+ *= require screen
  *= require social-share-button
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
+ *= require_tree .
  */
  

@@ -14,8 +14,16 @@
 //= require jquery_ujs
 //= require foundation
 //= require social-share-button
+//= require masonry.pkgd.min.js
+//= require jquery.waterfall.js
+//= require zepto.js
 //= require_tree .
 
+$(document).ready(function() {
+    $( '#list' ).masonry(
+    {
+        itemSelector: '.item'
+    });
+});
 $(document).foundation();
-
-$(function(){ $(document).foundation(); });
+  

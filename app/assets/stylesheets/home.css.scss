@@ -2,35 +2,3 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.slideshow {
-  padding-top: 45px;
-  background-color: #023580;
-  background-image: url('gradient.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-li {
-  list-style: none;
-}
-
-.pbn {
-  width: 450px;
-  margin: 61px auto auto;
-}
-.slideshow img {
-  margin: 35px auto auto;  
-}
-
-.blog-block {
-border: 1px solid #e1e1e1;
-padding: 10px;
--moz-box-shadow: 2px 2px 1px #e1e1e1;
--webkit-box-shadow: 2px 2px 1px #e1e1e1;
-box-shadow: 2px 2px 1px #e1e1e1;
-}
-
-.social-api {
-background: whiteSmoke;
-padding: 5px;
-}

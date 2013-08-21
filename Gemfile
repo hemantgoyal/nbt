@@ -48,10 +48,11 @@ gem "psych"
 
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.0', :git => 'git://github.com/refinery/refinerycms.git', :branch => '2-0-stable'
-
+gem 'refinerycms-blog', '~> 2.0.0'
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-videojs'
+gem 'refinerycms-sl-videos', '~> 2.0.0'
 gem 'refinerycms-mailchimp', :git => 'https://github.com/wirelab/refinerycms-mailchimp.git', :branch => 'refinery-2.0'
 #gem 'refinerycms-mailchimp'
 #  gem 'refinerycms-blog', '~> 2.0.0'
@@ -61,4 +62,4 @@ gem 'refinerycms-mailchimp', :git => 'https://github.com/wirelab/refinerycms-mai
 
 gem 'truncate_html'
 gem 'social-share-button'
-
+gem 'masonry-rails'

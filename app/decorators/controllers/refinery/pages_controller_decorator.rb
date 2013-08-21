@@ -6,6 +6,7 @@ Refinery::PagesController.class_eval do
     
       def find_all_blog_posts
         @pages = Refinery::Page.live
+        @blogpost = Refinery::Blog::Post.live
       end
 
   end
