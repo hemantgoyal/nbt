@@ -4,95 +4,100 @@
 <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-  <head>
-  	<meta charset="utf-8" />
+<head>
+  <meta charset="utf-8" />
 
-  	<!-- Uncomment to make IE8 render like IE7 -->
-  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+  <!-- Uncomment to make IE8 render like IE7 -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
-  	<!-- Set the viewport width to device width for mobile -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Nabthat" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Nabthat" %></title>
 
-  	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
-    <%= csrf_meta_tags %>
-  </head>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/custom.modernizr" %>
+  <%= csrf_meta_tags %>
+</head>
 
-  <body class="off-canvas hide-extras" style="zoom: 1;" cz-shortcut-listen="true">
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=181236315390623";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="container  home-border">
-<div class="attached contain-to-grid sticky">
-<nav class="top-bar " style="margin-bottom: 0px;">
-      <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <h1><a href="http://192.241.225.72:3000"><%= image_tag "logo.png" %></a></h1>
-        </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-
-<!--End mc_embed_signup-->
-      
-    <section class="top-bar-section right">
-      <!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-#mc_embed_signup form {
-  padding: 0px;
-}
-</style>
-<div id="mc_embed_signup">
-<form action="http://udproducts.us7.list-manage.com/subscribe/post?u=8e6646b5fd5bcb18a7c473965&amp;id=1c62236664" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	
-    <div class="large-12 columns">
-      <div class="row collapse">
-        <div class="small-12 columns">
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-</div>
-
-<div class="small-12 columns">
-  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="postfix radius right">
-</div>
-     </div>
-    </div>
- 
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>	
-</form>
-</div>
-
-      <!-- Right Nav Section 
-        <ul class="right">
-          <li class="divider"></li>
-          <li class=""><a href="">Find Cars</a></li>
-          <li class="divider"></li>
-          <li class=""><a href="">Find Dealers</a></li>
-          <li class="divider"></li>
-          <li class=""><a href="">Contacts</a></li>
-          <li class="divider"></li>
-          <li class=""><a href="/blog">Blog</a></li>
-          <li class="divider"></li>
+<body class="off-canvas hide-extras" style="zoom: 1;" cz-shortcut-listen="true">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=181236315390623";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <div class="container  home-border">
+    <div class="attached contain-to-grid sticky">
+      <nav class="top-bar " style="margin-bottom: 0px;">
+        <ul class="title-area">
+          <!-- Title Area -->
+          <li class="name">
+            <h1><a href="http://192.241.225.72:3000"><%= image_tag "logo.png" %></a></h1>
+          </li>
+          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
-        -->
-      </section></nav>
-        	</div>
-  </div>
+
+        <!--End mc_embed_signup-->
+
+        <section class="right large-3 small-12">
+          <!-- Begin MailChimp Signup Form -->
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+            #mc_embed_signup form {
+              padding: 0px;
+            }
+            #mc_embed_signup input:focus {
+              border-color: #F1F1F1;
+            }
+            #mc-embedded-subscribe {
+              margin: 2px 0 0 0 !important;
+              height: 24px;
+              line-height: 2px;
+            }
+
+          </style>
+          <div id="mc_embed_signup" class = "large-12 columns hide-for-small">
+            <form action="http://udproducts.us7.list-manage.com/subscribe/post?u=8e6646b5fd5bcb18a7c473965&amp;id=1c62236664" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div class="row collapse">
+                <div class="small-10 large-7 columns left">
+                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                </div>
+                <div class="small-2 large-5 columns left ">
+                  <input type="submit" value="Subscribe Newsletter" name="subscribe" id="" class="postfix radius">
+                </div>
+              </div>
+
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Nav Section
+            <ul class="right">
+              <li class="divider"></li>
+              <li class=""><a href="">Find Cars</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="">Find Dealers</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="">Contacts</a></li>
+              <li class="divider"></li>
+              <li class=""><a href="/blog">Blog</a></li>
+              <li class="divider"></li>
+            </ul>
+          -->
+        </section></nav>
+      </div>
+    </div>
 
     <%= yield %>
 
-    
+
     <%= javascript_include_tag "application" %>
   </body>
-</html>
+  </html>

@@ -58,7 +58,9 @@ padding: 5px;
   float: left;
   margin-right: 10px;
 }
-
+#mc_embed_signup {
+  margin-top: 13px;
+}
 #wrapper
 {
     max-width: 60em; /* 960 px */
