@@ -39,14 +39,14 @@ h6 {
   padding-right: 40px;
 }
 p {
-  font-family: helvetica Neue helvetica, sans-serif;
+  font-family: helvetica Neue helvetica, sans-serif !important;
   font-size: 17px !important;
   color: #555;
   margin-bottom: 0px;
   line-height: 27px !important;
 }
 
-p.img {
+p img {
   display: table-cell;
   margin-left: auto;
   margin-right: auto;
@@ -89,9 +89,12 @@ li {
 
 .social-api {
   margin-top: 20px;
-  padding: 5px;
+  padding: 15px 0px 15px 20px;
   border: 1px solid #e1e1e1;
   background-color: white;
+  -moz-box-shadow: 2px 2px 1px #e1e1e1;
+  -webkit-box-shadow: 2px 2px 1px #E1E1E1;
+  box-shadow: 2px 2px 1px #E1E1E1;
 }
 .item.w2 { width: 50%; }
 
@@ -128,7 +131,11 @@ li {
 .blog_body {
   border: 1px solid #E1E1E1;
   margin-top: 25px;
+  padding-bottom: 20px;
   background-color: white;
+  -moz-box-shadow: 2px 2px 1px #e1e1e1;
+  -webkit-box-shadow: 2px 2px 1px #E1E1E1;
+  box-shadow: 2px 2px 1px #E1E1E1;
 }
 .right_side_bar {
   border: 1px solid #E1E1E1;
@@ -138,6 +145,9 @@ li {
   width: 20%;
   padding-bottom: 10px;
    background-color: white;
+  -moz-box-shadow: 2px 2px 1px #e1e1e1;
+  -webkit-box-shadow: 2px 2px 1px #E1E1E1;
+  box-shadow: 2px 2px 1px #E1E1E1;
 }
 .page_background {
   background-color: #fafafa;
