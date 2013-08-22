@@ -1,6 +1,13 @@
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
 }
+a {
+  color: #555 !important;
+}
+a:hover {
+  color: #777 !important;
+  background-color: transparent !important;
+}
 .bodycontainer {
   background-color: #fafafa;
 }

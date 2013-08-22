@@ -28,7 +28,7 @@
       <div class="large-3 small-block-grid-1 columns blog-block left item">
         <h4><a><%= link_to p.title, "/blog/posts/"+p.slug %></a></h4>
         <% content = sanitize(p.body.to_s) %>
-        <%= truncate_html(content, :length => 150)  %><%= link_to "Read more", "/blog/posts/"+p.slug %>
+        <%= truncate_html(content, :length => 150)  %><%= link_to "Read more", "/blog/posts/"+p.slug, :class => "right" %>
       </div>
     <%end%>
   </div>
