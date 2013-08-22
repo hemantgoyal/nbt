@@ -1,20 +1,33 @@
-<div class="row">
-  <div class="large-9 columns">
+<div class="bodycontainer">
+<div class="slideshow">
+  <div class="row">
+    <div class="pbn">
+      <%= image_tag "pbn.png" %>
+    </div>
+  </div>
+</div>
+
+<div class="large-12 columns page_background">
+  <div class="large-1 columns"></div>
+  <div class="large-8 push-1 columns">
     <%= render_content_page(@page, {
       :hide_sections => local_assigns[:hide_sections],
       :can_use_fallback => !local_assigns[:show_empty_sections] && !local_assigns[:remove_automatic_sections]
     }) %>
   </div>
-
-  <div class="large-3 columns">
+  <div class="large-1 columns"></div>
+  <div class="right_side_bar columns">
+    <%= render :partial => "/refinery/blog/shared/posts" %>
+    <hr>
     <div class="row">
+      <h5>VIA TWITTER</h5>
       <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/NabthatLA" data-widget-id="369755868838891520">Tweets by @NabthatLA</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
     
     <div class="row">
       <hr>
-      <h2>Instagrams</h2>
+      <h5>VIA INSTAGRAM</h5>
       <% Instagram.media_popular[0..14].each do |insta| %>
         <%= image_tag "#{insta.images.thumbnail.url}", :class => "insta_thumbs" %>
       <% end %>

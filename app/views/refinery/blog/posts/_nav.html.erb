@@ -1,4 +1,4 @@
-<nav id="next_prev_article">
+<nav id="next_prev_article" class="left">
   <% if @post.next.present? -%>
     <%= link_to h(truncate(@post.next.title)) + " &#187;".html_safe,
                 refinery.blog_post_path(@post.next),

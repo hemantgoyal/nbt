@@ -50,8 +50,12 @@
             #mc_embed_signup form {
               padding: 0px;
             }
+            #mc_embed_signup input {
+              border-radius: 4px;
+            }
             #mc_embed_signup input:focus {
               border-color: #F1F1F1;
+              border-radius: 4px;
             }
             #mc-embedded-subscribe {
               margin: 2px 0 0 0 !important;
@@ -110,7 +114,8 @@
 
     <%= yield %>
 
-
+<footer class="large-12 columns"><div class="copyright"> &#9400; Copyright 2013, All Rights Reserved, Nabthat Inc</div>
+</footer>
     <%= javascript_include_tag "application" %>
   </body>
   </html>
