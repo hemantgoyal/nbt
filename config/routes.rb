@@ -1,5 +1,11 @@
 Nabblog1::Application.routes.draw do
 
+
+  mount Ckeditor::Engine => '/ckeditor'
+
+  resources :maillinglists
+
+
   get "home/index"
 
   # This line mounts Refinery's routes at the root of your application.

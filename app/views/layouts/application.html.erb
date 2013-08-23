@@ -35,7 +35,7 @@
         <ul class="title-area">
           <!-- Title Area -->
           <li class="name">
-            <h1><a href="http://192.241.225.72:3000"><%= image_tag "logo.png" %></a></h1>
+            <h1><a href="http://192.241.225.72:3000"><%= image_tag "logo.png", :class => "png_logo" %></a></h1>
           </li>
           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -43,7 +43,7 @@
 
         <!--End mc_embed_signup-->
 
-        <section class="right large-3 small-12">
+        <section class="right large-4 small-12 push-1">
           <!-- Begin MailChimp Signup Form -->
           <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
           <style type="text/css">
@@ -66,7 +66,7 @@
               margin-left: 5px;
             }
           </style>
-          <div id="mc_embed_signup" class="large-12 columns hide-for-small">
+          <div id="mc_embed_signup" class="large-8 columns hide-for-small">
 <!--            <form action="http://udproducts.us7.list-manage.com/subscribe/post?u=8e6646b5fd5bcb18a7c473965&amp;id=1c62236664" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
              <% @mailinglist = Maillinglist.new %>
 -->          <%= form_tag("/maillinglists", remote: true, validate: true)  do %>
@@ -116,7 +116,7 @@
 
     <%= yield %>
 
-<footer class="large-12"><div class="copyright"> &#9400; Copyright 2013, All Rights Reserved, Nabthat Inc</div>
+<footer class="large-12 left"><div class="copyright"> &#9400; Copyright 2013, All Rights Reserved, Nabthat Inc</div>
 </footer>
     <%= javascript_include_tag "application" %>
   </body>

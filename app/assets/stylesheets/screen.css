@@ -1,6 +1,19 @@
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+  background-color: #fafafa;
 }
+.png_logo {
+  margin-left: 11px;
+}
+
+#blog_posts .li_icon ul li::before{
+position: absolute;
+left: 0;
+content: "f105";
+font-size: 10px;
+color: #469AF6;
+}
+
 a {
   color: #555 !important;
 }
@@ -59,7 +72,6 @@ p img {
   color: #adb5bb;
 }
 .slideshow {
-  padding-top: 45px;
   background-color: #023580;
   background-image: url('gradient.png');
   background-repeat: no-repeat;
@@ -70,13 +82,6 @@ li {
   list-style: none;
 }
 
-.pbn {
-  width: 450px;
-  margin: 61px auto auto;
-}
-.slideshow img {
-  margin: 35px auto auto;
-}
 
 .blog-block {
   border: 1px solid #e1e1e1;
@@ -110,18 +115,16 @@ li {
   max-width: 60em; /* 960 px */
   margin: 0 auto;
 }
-#list
-{
-  width: 103.125%; /* 990px */
 
-  margin-left: -1.562%; /* 15px */
-}
 .item
 {
-  width: 30.303%; /* 300px */
+  width: 30%; /* 300px */
   float: left;
-  margin: 0 1.515% 1.875em; /* 15px 30px */
+  margin-left: 35px; /* 15px 30px */
+  margin-bottom: 17px;
+  margin-top: 10px;
   background-color: white;
+  overflow: hidden;
 }
 .insta_thumbs {
   width: 33.3%;

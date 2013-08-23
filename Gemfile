@@ -64,3 +64,6 @@ gem 'truncate_html'
 gem 'social-share-button'
 gem 'masonry-rails'
 gem 'instagram'
+
+gem 'ckeditor'
+gem 'paperclip'
