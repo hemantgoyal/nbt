@@ -67,3 +67,5 @@ gem 'instagram'
 
 gem 'ckeditor'
 gem 'paperclip'
+gem "carrierwave"
+gem "mini_magick"
