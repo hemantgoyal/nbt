@@ -62,7 +62,9 @@
               height: 24px;
               line-height: 2px;
             }
-
+            #subscribe_submit {
+              margin-left: 5px;
+            }
           </style>
           <div id="mc_embed_signup" class="large-12 columns hide-for-small">
 <!--            <form action="http://udproducts.us7.list-manage.com/subscribe/post?u=8e6646b5fd5bcb18a7c473965&amp;id=1c62236664" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -75,7 +77,7 @@
                 </div>
                 <div class="small-2 large-5 columns left ">
 <!--                  <input type="submit" value="Subscribe" name="subscribe" id="" class="postfix radius">
--->                   <%= submit_tag "Subscribe", :id => "subscribe_submit", :class => "postfix" %>
+-->                   <%= submit_tag "Subscribe", :id => "subscribe_submit", :class => "postfix button-base size style" %>
                 </div>
               </div>
               
@@ -114,7 +116,7 @@
 
     <%= yield %>
 
-<footer class="large-12 columns"><div class="copyright"> &#9400; Copyright 2013, All Rights Reserved, Nabthat Inc</div>
+<footer class="large-12"><div class="copyright"> &#9400; Copyright 2013, All Rights Reserved, Nabthat Inc</div>
 </footer>
     <%= javascript_include_tag "application" %>
   </body>
