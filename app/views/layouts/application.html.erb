@@ -52,6 +52,8 @@
             }
             #mc_embed_signup input {
               border-radius: 4px;
+              height: 35px;
+              font-size: 15px;
             }
             #mc_embed_signup input:focus {
               border-color: #F1F1F1;
@@ -66,16 +68,16 @@
               margin-left: 5px;
             }
           </style>
-          <div id="mc_embed_signup" class="large-8 columns hide-for-small">
+          <div id="mc_embed_signup" class="large-9 columns hide-for-small">
 <!--            <form action="http://udproducts.us7.list-manage.com/subscribe/post?u=8e6646b5fd5bcb18a7c473965&amp;id=1c62236664" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
              <% @mailinglist = Maillinglist.new %>
 -->          <%= form_tag("/maillinglists", remote: true, validate: true)  do %>
               <div class="row collapse">
-                <div class="small-10 large-7 columns left">
+                <div class="small-10 large-8 columns left">
 <!--                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
--->                   <%= email_field_tag "maillinglist[email]", nil, :placeholder => "Email Address", :required => true %>
+-->                   <%= email_field_tag "maillinglist[email]", nil, :width =>200, :placeholder => "Email Address", :required => true %>
                 </div>
-                <div class="small-2 large-5 columns left ">
+                <div class="small-2 large-4 columns left ">
 <!--                  <input type="submit" value="Subscribe" name="subscribe" id="" class="postfix radius">
 -->                   <%= submit_tag "Subscribe", :id => "subscribe_submit", :class => "postfix button-base size style" %>
                 </div>
@@ -116,7 +118,7 @@
 
     <%= yield %>
 
-<footer class="large-12 left"><div class="copyright"> &#9400; Copyright 2013, All Rights Reserved, Nabthat Inc</div>
+<footer class="large-12 left"><div class="copyright"> &#9400; 2013, All Rights Reserved, nabthat Inc</div>
 </footer>
     <%= javascript_include_tag "application" %>
   </body>

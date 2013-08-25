@@ -1,6 +1,6 @@
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
-  background-color: #fafafa;
+  background-color: #fafafa !important;
 }
 .png_logo {
   margin-left: 11px;
@@ -30,7 +30,22 @@ a:hover {
 .contain-to-grid .top-bar {
   max-width: none;
 }
-
+.button-base {
+   color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #006dcc;
+  *background-color: #0044cc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
 .attached .top-bar {
   height: 65px !important;
   background-color: #f1f1f1 !important;
@@ -101,14 +116,47 @@ li {
   -webkit-box-shadow: 2px 2px 1px #E1E1E1;
   box-shadow: 2px 2px 1px #E1E1E1;
 }
+
+.comment_outer_box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px 15px 15px 20px;
+  border: 1px solid #e1e1e1;
+  background-color: white;
+  -moz-box-shadow: 2px 2px 1px #e1e1e1;
+  -webkit-box-shadow: 2px 2px 1px #E1E1E1;
+  box-shadow: 2px 2px 1px #E1E1E1;
+}
 .item.w2 { width: 50%; }
+.item h4 {
+  text-align: center;
+}
+.recent_posts {
+  margin-bottom: 10px !important;
+  float: left;
+}
+.li_icon_color {
+  margin-top: 7px !important;
+  margin-right: 5px;
+  color: #469AF6;
+  font-size: 8px;
+}
+
+.li_bottom {
+  margin-bottom: 3px;
+}
 
 .blog_comment_message img{
   float: left;
   margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.comment_outer_box h4 {
+  color: #555;
 }
 #mc_embed_signup {
-  margin-top: 13px;
+  margin-top: 6px;
 }
 #wrapper
 {
@@ -133,7 +181,7 @@ li {
 
 .blog_body {
   border: 1px solid #E1E1E1;
-  margin-top: 25px;
+  margin-top: 30px;
   padding-bottom: 20px;
   background-color: white;
   -moz-box-shadow: 2px 2px 1px #e1e1e1;
@@ -159,6 +207,10 @@ li {
   margin-top: 20px;
   background-color: white;
   border: 1px solid #e1e1e1;
+}
+
+.blog_comment_author {
+  color: #555;
 }
 
 .social-share-button-Googlebookmark{background: url("/assets/social-share-button.png") !important; background-position: 0 0 !important; width: 32px !important; height: 32px !important; } 

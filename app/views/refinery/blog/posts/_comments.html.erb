@@ -1,5 +1,5 @@
 
-<aside id="comments">
+<aside id="comments" class="left large-12 columns comment_outer_box">
   <h4>Comments</h4>
   <% if (comments = @post.comments.approved).any? %>
     <%= render :partial => "comment", :collection => comments %>
