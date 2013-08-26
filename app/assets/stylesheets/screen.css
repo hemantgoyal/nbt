@@ -266,6 +266,9 @@ height: 0;
   margin-right: 40px;
   
 }
+.blog-block-content img{
+  margin: 0px !important;
+}
 .blog-block-meta {
   width: 100%;
   float: left;
