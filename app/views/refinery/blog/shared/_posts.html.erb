@@ -1,9 +1,9 @@
 <% if @posts.many? %>
 <div class="recent_posts">
-<h5 class="li_icon">RECENT POSTS</h5>
+<h5 class="recent_post_head">RECENT POSTS</h5>
   <ul id="blog_posts">
     <% @posts.each do |blog_post| %>
-      <i class="icon-chevron-right left li_icon_color"></i><li class='clearfix left large-11 li_bottom'>
+      <i class="icon-chevron-right left li_icon_color"></i><li class='clearfix left large-9 li_recent_posts'>
         <%= link_to blog_post.title, refinery.blog_post_path(blog_post) %>
       </li>
     <% end %>

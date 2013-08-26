@@ -1,11 +1,17 @@
-<article class='blog_comment_message' id='<%= "comment-#{comment.to_param}" %>'>
+<article class='blog_comment_message left large-12' id='<%= "comment-#{comment.to_param}" %>'>
   <%= image_tag comment.avatar_url, :alt => comment.name, :class => 'avatar' %>
+  <div class="commenter_detail large-10">
+  <span class="commenter_name"><%= comment.name %></span>
+  <span class="comment_time"><%= comment.created_at.try(:strftime, '%b %d, %Y') %></span>
+  </div>
+  <div class="user_comment_body">
   <%= simple_format auto_link(comment.message.to_s) %>
+</div>
   <footer class='blog_comment_author'>
     
-      <%= t('by', :scope => 'refinery.blog.posts.comments', :who => comment.name) %>,
-      <%= t('time_ago', :scope => 'refinery.blog.posts.comments', :time => time_ago_in_words(comment.created_at)) %>
+      <% t('by', :scope => 'refinery.blog.posts.comments', :who => comment.name) %>,
+      <% t('time_ago', :scope => 'refinery.blog.posts.comments', :time => time_ago_in_words(comment.created_at)) %>
     
   </footer>
 </article>
-<hr>
+<div class="comment_break"></div>

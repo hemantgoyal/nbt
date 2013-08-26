@@ -5,10 +5,9 @@
 <% end %>
 <article id="blog_post" class="large-12 columns blog_body">
   <header>
-    <h1><%= @post.title %></h1>
-    <section class='details'>
+    <section class='details left large-12 columns'>
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
-        <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>
+              <%= @post.published_at.try(:strftime, '%b %d, %Y') || 'draft' %> - <%= @post.author.username %>
       </time>
       <% content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}", :class => "blog_author") if @post.author.present? %>
       <% if @post.source_url.present? %>
@@ -26,6 +25,7 @@
         </aside>
       <% end %>
     </section>
+        <h1 class="large-10 columns left"><%= @post.title %></h1>
   </header>
   <div class="push-1 large-10 columns">
   <%= @post.body.html_safe %>

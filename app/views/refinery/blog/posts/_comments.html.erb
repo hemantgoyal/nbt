@@ -1,6 +1,7 @@
 
 <aside id="comments" class="left large-12 columns comment_outer_box">
-  <h4>Comments</h4>
+<h4 class="large-10 left">Comments</h4><div class="comment_count"><% if @post.comments.count > 1 %> <%= @post.comments.count %> COMMENTS <% elsif @post.comments.count == 1 %> <%= @post.comments.count %> COMMENT <% else %> 0 COMMENT<% end %></div>
+  <hr>
   <% if (comments = @post.comments.approved).any? %>
     <%= render :partial => "comment", :collection => comments %>
   <% else %>
@@ -14,8 +15,9 @@
       <%= value %>
     </div>
   <% end %>
-<div>
-  <h4>Join the conversation</h4></div>
+  
+<div class="join_conversation">
+  <h4>Join the conversation</h4></div><hr>
   <%= form_for [refinery, :blog, @comment] do |f| %>
     <%= render :partial => "/refinery/admin/error_messages",
                :locals => {
