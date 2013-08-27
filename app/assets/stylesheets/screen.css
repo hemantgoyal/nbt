@@ -268,8 +268,8 @@ height: 0;
   
 }
 .blog-block-content p {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
 }
 
 .blog-block-content img {
