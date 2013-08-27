@@ -1,6 +1,7 @@
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
   background-color: #f7f7f7 !important;
+  background-image: url('/assets/pbn_blog_bg.jpg');
 }
 .png_logo {
   margin-left: 11px;
@@ -44,6 +45,7 @@ a:hover {
 }
 .bodycontainer {
   background-color: #fafafa;
+  background: url("/assets/pbn_bg.jpg");
 }
 .contain-to-grid {
   background-color: #e1e1e1;
@@ -127,9 +129,11 @@ p img {
   background-image: url('gradient.png');
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-bottom: 40px;
 }
-
+.home_tiled_top {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 li {
   list-style: none;
 }
@@ -236,6 +240,7 @@ height: 0;
 }
 #mc_embed_signup {
   margin-top: 6px;
+  padding-right: 15px;
 }
 #wrapper
 {
@@ -261,11 +266,16 @@ height: 0;
   margin-right: 40px;
   
 }
-.blog-block-content {
+.blog-block-content p {
   margin-left: 40px;
   margin-right: 40px;
-  
 }
+
+.blog-block-content img {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
 .blog-block-content img{
   margin: 0px !important;
 }
@@ -327,6 +337,9 @@ height: 0;
 
 .page_background {
   background-color: #f7f7f7;
+  background-image: url('/assets/pbn_blog_bg.jpg');
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .comments_section {
   margin-top: 20px;
@@ -337,7 +350,27 @@ height: 0;
 .blog_comment_author {
   color: #555;
 }
-
+.fb-share-button {
+  float: left;
+  background: #ECEEF5;
+-webkit-border-radius: 3px;
+border: 1px solid #CAD4E7;
+cursor: pointer;
+padding: 0px 6px 0px;
+white-space: nowrap;
+color: #3B5998;
+margin-right: 20px;
+}
+.fb-share {
+  background: url("/assets/fb.png");
+  background-position: 0 0;
+  width: 14px;
+  height: 14px ;
+  background-repeat: no-repeat;
+  float: left;
+  margin-top: 2px;
+  margin-right: 2px;
+}
 .social-share-button-Googlebookmark{background: url("/assets/social-share-button.png") !important; background-position: 0 0 !important; width: 32px !important; height: 32px !important; } 
 .social-share-button-Google-Plus{background: url("/assets/social-share-button.png") !important; background-position: 0 -34px !important; width: 32px !important; height: 32px !important; } 
 .social-share-button-baidu{background: url("/assets/social-share-button.png") !important; background-position: 0 -68px !important; width: 32px !important; height: 32px !important;} 
@@ -356,8 +389,20 @@ height: 0;
 
 .copyright {
   height: 60px;
-  background-color: #dbdbdb;
+  background-color: #BCBCBC;
   padding-top: 20px;
   padding-left: 20px;
   
+}
+
+.section-container {
+  float: left;
+}
+
+.blog_comment_tab1 {
+  left: 300px !important;
+}
+
+.blog_comment_tab2 {
+  left: 414px !important;
 }

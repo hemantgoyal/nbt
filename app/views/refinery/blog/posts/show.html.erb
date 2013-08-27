@@ -4,18 +4,32 @@
   </div>
 
   <% if Refinery::Blog::Post.comments_allowed? %>
+
+  <div class="section-container auto" data-section>
+  <section>
+    <p class="title blog_comment_tab1" data-section-title><a href="#panel1">COMMENTS</a></p>
+    <div class="content left large-12" data-section-content>
+          <%= render 'comments'%>
+    </div>
+  </section>
+  <section>
+    <p class="title blog_comment_tab2" data-section-title><a href="#panel2">SHARE</a></p>
+    <div class="content left large-12 " data-section-content>
   <div class="social-api left large-12 columns">
     <h6>Share this: </h6>
-    <%= social_share_button_tag(@post.title) %>
-    <hr>
-      <h6>Like this: </h6>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%= "http://nabthat.com/blog/posts/"+ @post.slug %> data-via="NabthatLA" data-dnt="true">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<div class="fb-like" data-href=<%= "http://nabthat.com/blog/posts/"+ @post.slug %> data-width="100" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+    <% social_share_button_tag(@post.title) %>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url=<%= "http://nabthat.com/blog/posts/"+ @post.slug %> data-via="NabthatLA" data-dnt="true">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <div class="fb-like" data-href=<%= "http://nabthat.com/blog/posts/"+ @post.slug %> data-width="100" data-layout="button_count" data-show-faces="false" data-send="false"></div>
 
   </div>
+</div>
+  </section>
+</div>
 
-    <%= render 'comments'%>
+
+  
+
 
   <% end %>
 <% end %>

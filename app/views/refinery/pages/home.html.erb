@@ -2,7 +2,7 @@
 <div class="bodycontainer">
 <div class="slideshow">
     <div class="pbn">
-      <%= image_tag "pbn_banner.png" %>
+      <%= image_tag "pbn_banner.jpg" %>
     </div>
 </div>
 <!--
@@ -19,13 +19,13 @@
   </div>
   </div>
 -->
-<div  class="large-12 ">
+<div  class="large-12 home_tiled_top">
   <div id="list">
     <% @blogpost.each do |p| %>
       <div class="large-3 small-block-grid-1 blog-block left item">
         <div class="blog-block-heading"><h2><a><%= link_to p.title, "/blog/posts/"+p.slug %></a></h2></div>
         <div class="blog-block-content"><% content = sanitize(p.body.to_s) %>
-        <%= truncate_html(content, :length => 150)  %></div>
+        <%= truncate_html(content, :length => 150, omission: ' ')  %></div>
         <div class="blog-block-meta">
         <% if p.comments.count > 0 %> <i class="icon-comment"></i> <%= p.comments.count %>  <% else %><i class="icon-comment"></i> 0 <% end %>
         <%= link_to "Read more", "/blog/posts/"+p.slug, :class => "right read-more" %>
