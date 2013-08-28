@@ -24,6 +24,7 @@
     <% @blogpost.each do |p| %>
       <div class="large-3 small-block-grid-1 blog-block left item">
         <div class="blog-block-heading"><h2><a><%= link_to p.title, "/blog/posts/"+p.slug %></a></h2></div>
+        <%= raw(p.custom_teaser) %>
         <div class="blog-block-content"><% content = sanitize(p.body.to_s) %>
         <%= truncate_html(content, :length => 150, omission: ' ')  %></div>
         <div class="blog-block-meta">
