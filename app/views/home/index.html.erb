@@ -6,6 +6,27 @@
     </div>
   </div>
 </div>
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Edit registration', edit_user_registration_path) %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Register', new_user_registration_path)  %>
+  </li>
+<% end %>
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+
+<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
 <div class="large-12 columns">
   <div class="docs header">
     <h2>Latest Blogs</h2>
@@ -19,7 +40,7 @@
         <%= truncate_html(content, :length => 150)  %><%= link_to "Read more", "/blog/"+p.slug %>
       </div>
     </li>
-    <%end%>
+    <% end %>
   </ul>
     <ul class="left large-12 columns">
     <% @bottom_pages.each do |p| %>

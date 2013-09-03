@@ -65,6 +65,13 @@ gem 'social-share-button'
 gem 'masonry-rails'
 gem 'instagram'
 
+gem 'devise'
+gem 'devise-async'
+gem 'omniauth'
+gem 'omniauth-facebook', '~> 1.4.1'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
+gem 'cancan'
 gem 'ckeditor'
 gem 'paperclip'
 gem "carrierwave"

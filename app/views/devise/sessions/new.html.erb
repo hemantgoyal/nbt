@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="sign_in_page">
+    <div class="sign_in_header">
+    <h2 class="left_275">Login to nab that</h2>
+    <h5 class="left_350">Bid your price now!</h4>
+    </div>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div class="sign_in_form large-6 push-3">
+<div class="large-9 columns left left_50px"><br />
+  <%= f.email_field :email, :placeholder => "Email", :class => "sign_in_input" %></div>
+
+  <div class="large-9 columns left left_50px"><br />
+  <%= f.password_field :password, :placeholder => "Password", :class => "sign_in_input" %></div>
+
+  <div class="large-7 left"><%= f.submit "Login", :class => "medium button success radius large-8 push-6" %></div>
+  </div>
+<% end %>
+<div class="large-7 left">
+<%= render "social_links" %>
+</div>
+</div>
+</div>
