@@ -1,12 +1,20 @@
 Nabblog1::Application.routes.draw do
 
 
+  resources :profiles
+
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :maillinglists
 
 
   get "home/index"
+  
+  get '/auth/:provider/callback', to: 'sessions#create'
+
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
