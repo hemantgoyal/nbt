@@ -1,0 +1,47 @@
+<h1>Listing counter_bids</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Bid</th>
+    <th>Buy</th>
+    <th>Lease</th>
+    <th>Finance</th>
+    <th>Monthly payment</th>
+    <th>Down payment</th>
+    <th>No of month</th>
+    <th>Comment</th>
+    <th>Save</th>
+    <th>Max miles</th>
+    <th>Bid time</th>
+    <th>Confirmation no</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @counter_bids.each do |counter_bid| %>
+  <tr>
+    <td><%= counter_bid.user_id %></td>
+    <td><%= counter_bid.bid_id %></td>
+    <td><%= counter_bid.buy %></td>
+    <td><%= counter_bid.lease %></td>
+    <td><%= counter_bid.finance %></td>
+    <td><%= counter_bid.monthly_payment %></td>
+    <td><%= counter_bid.down_payment %></td>
+    <td><%= counter_bid.no_of_month %></td>
+    <td><%= counter_bid.comment %></td>
+    <td><%= counter_bid.save %></td>
+    <td><%= counter_bid.max_miles %></td>
+    <td><%= counter_bid.bid_time %></td>
+    <td><%= counter_bid.confirmation_no %></td>
+    <td><%= link_to 'Show', counter_bid %></td>
+    <td><%= link_to 'Edit', edit_counter_bid_path(counter_bid) %></td>
+    <td><%= link_to 'Destroy', counter_bid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Counter bid', new_counter_bid_path %>

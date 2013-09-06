@@ -26,6 +26,7 @@ $(document).ready(function() {
   
 });
 $(document).foundation();
+
 $( window ).load( function()
 {
     $( '#list' ).masonry( { itemSelector: '.item' } );

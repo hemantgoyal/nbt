@@ -1,0 +1,75 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @car_info.user_id %>
+</p>
+
+<p>
+  <b>Make:</b>
+  <%= @car_info.make %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @car_info.model %>
+</p>
+
+<p>
+  <b>Model year:</b>
+  <%= @car_info.model_year %>
+</p>
+
+<p>
+  <b>Trim:</b>
+  <%= @car_info.trim %>
+</p>
+
+<p>
+  <b>Additional feature:</b>
+  <%= @car_info.additional_feature %>
+</p>
+
+<p>
+  <b>Car image:</b>
+  <%= @car_info.car_image %>
+</p>
+
+<p>
+  <b>Body style:</b>
+  <%= @car_info.body_style %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @car_info.price %>
+</p>
+
+<p>
+  <b>Mileage:</b>
+  <%= @car_info.mileage %>
+</p>
+
+<p>
+  <b>Exterior color:</b>
+  <%= @car_info.exterior_color %>
+</p>
+
+<p>
+  <b>Interior color:</b>
+  <%= @car_info.interior_color %>
+</p>
+
+<p>
+  <b>Transmission:</b>
+  <%= @car_info.transmission %>
+</p>
+
+<p>
+  <b>Engine:</b>
+  <%= @car_info.engine %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_info_path(@car_info) %> |
+<%= link_to 'Back', car_infos_path %>

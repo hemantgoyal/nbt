@@ -1,0 +1,49 @@
+<h1>Listing car_infos</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Model year</th>
+    <th>Trim</th>
+    <th>Additional feature</th>
+    <th>Car image</th>
+    <th>Body style</th>
+    <th>Price</th>
+    <th>Mileage</th>
+    <th>Exterior color</th>
+    <th>Interior color</th>
+    <th>Transmission</th>
+    <th>Engine</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @car_infos.each do |car_info| %>
+  <tr>
+    <td><%= car_info.user_id %></td>
+    <td><%= car_info.make %></td>
+    <td><%= car_info.model %></td>
+    <td><%= car_info.model_year %></td>
+    <td><%= car_info.trim %></td>
+    <td><%= car_info.additional_feature %></td>
+    <td><%= car_info.car_image %></td>
+    <td><%= car_info.body_style %></td>
+    <td><%= car_info.price %></td>
+    <td><%= car_info.mileage %></td>
+    <td><%= car_info.exterior_color %></td>
+    <td><%= car_info.interior_color %></td>
+    <td><%= car_info.transmission %></td>
+    <td><%= car_info.engine %></td>
+    <td><%= link_to 'Show', car_info %></td>
+    <td><%= link_to 'Edit', edit_car_info_path(car_info) %></td>
+    <td><%= link_to 'Destroy', car_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Car info', new_car_info_path %>

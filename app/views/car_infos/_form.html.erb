@@ -1,0 +1,73 @@
+<%= form_for(@car_info) do |f| %>
+  <% if @car_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@car_info.errors.count, "error") %> prohibited this car_info from being saved:</h2>
+
+      <ul>
+      <% @car_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :make %><br />
+    <%= f.text_field :make %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :model_year %><br />
+    <%= f.date_select :model_year %>
+  </div>
+  <div class="field">
+    <%= f.label :trim %><br />
+    <%= f.text_field :trim %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_feature %><br />
+    <%= f.text_field :additional_feature %>
+  </div>
+  <div class="field">
+    <%= f.label :car_image %><br />
+    <%= f.text_field :car_image %>
+  </div>
+  <div class="field">
+    <%= f.label :body_style %><br />
+    <%= f.text_field :body_style %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :mileage %><br />
+    <%= f.text_field :mileage %>
+  </div>
+  <div class="field">
+    <%= f.label :exterior_color %><br />
+    <%= f.text_field :exterior_color %>
+  </div>
+  <div class="field">
+    <%= f.label :interior_color %><br />
+    <%= f.text_field :interior_color %>
+  </div>
+  <div class="field">
+    <%= f.label :transmission %><br />
+    <%= f.text_field :transmission %>
+  </div>
+  <div class="field">
+    <%= f.label :engine %><br />
+    <%= f.text_field :engine %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

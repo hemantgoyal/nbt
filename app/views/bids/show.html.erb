@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @bid.user_id %>
+</p>
+
+<p>
+  <b>Buy:</b>
+  <%= @bid.buy %>
+</p>
+
+<p>
+  <b>Lease:</b>
+  <%= @bid.lease %>
+</p>
+
+<p>
+  <b>Finance:</b>
+  <%= @bid.finance %>
+</p>
+
+<p>
+  <b>Monthly payment:</b>
+  <%= @bid.monthly_payment %>
+</p>
+
+<p>
+  <b>Down payment:</b>
+  <%= @bid.down_payment %>
+</p>
+
+<p>
+  <b>No of month:</b>
+  <%= @bid.no_of_month %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @bid.comment %>
+</p>
+
+<p>
+  <b>Save:</b>
+  <%= @bid.save %>
+</p>
+
+<p>
+  <b>Max miles:</b>
+  <%= @bid.max_miles %>
+</p>
+
+<p>
+  <b>Bid time:</b>
+  <%= @bid.bid_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_bid_path(@bid) %> |
+<%= link_to 'Back', bids_path %>
