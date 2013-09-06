@@ -1,6 +1,19 @@
 Nabblog1::Application.routes.draw do
 
 
+  resources :car_infos
+
+
+  resources :counter_bids
+
+
+  resources :bids
+
+
+  get "dashboard/customer"
+
+  get "dashboard/dealer"
+
   resources :profiles
 
 
