@@ -2,6 +2,7 @@ body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
   background-color: #f7f7f7 !important;
   background-image: linear-gradient(180deg , #FFFFFF 0%, rgb(233,233,233) 100%);
+  height: 530px !important;
 }
 .png_logo {
   margin-left: 11px;
@@ -487,4 +488,28 @@ margin-right: 20px;
   height: 35px;
   font-size: 15px;
   color: #777;
+  }
+  
+.dash_header {
+  margin-top: 50px;
+  background-color: #285EAE;
+  color: white !important;
+  }
+  
+.dash_header h1 {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 30px;
+  }
+  
+#footer_relative {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  }
+  
+.height_dash {
+  height: 530px;
   }
