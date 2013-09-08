@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
   attr_accessible :profile
   
 
+  has_many :bids
+#  has_many :counter_bids
+#  has_many :car_infos
+
   def update_with_password(params={})
     current_password = params.delete(:current_password)
 

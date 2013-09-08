@@ -9,9 +9,9 @@ class CreateBids < ActiveRecord::Migration
       t.integer :down_payment
       t.integer :no_of_month
       t.string :comment
-      t.boolean :save
-      t.int :max_miles
-      t.int :bid_time
+      t.boolean :save_bid
+      t.integer :max_miles
+      t.integer :bid_time
 
       t.timestamps
     end

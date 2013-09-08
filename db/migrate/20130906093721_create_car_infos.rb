@@ -1,7 +1,7 @@
 class CreateCarInfos < ActiveRecord::Migration
   def change
     create_table :car_infos do |t|
-      t.int :user_id
+      t.integer :user_id
       t.string :make
       t.string :model
       t.date :model_year
@@ -9,8 +9,8 @@ class CreateCarInfos < ActiveRecord::Migration
       t.string :additional_feature
       t.string :car_image
       t.string :body_style
-      t.int :price
-      t.int :mileage
+      t.integer :price
+      t.integer :mileage
       t.string :exterior_color
       t.string :interior_color
       t.string :transmission

@@ -1,2 +1,22 @@
-<h1>Dashboard#customer</h1>
-<p>Find me in app/views/dashboard/customer.html.erb</p>
+<div class="large-12 left height_dash ">
+  <div class="dash_header">
+
+<h1>Dashboard</h1>
+</div>
+
+<div id="myModal" class="reveal-modal">
+  <h2>Awesome. I have it.</h2>
+  <%= render 'bids/form' %>  
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+<a href="#" data-reveal-id="myModal" class="small button right">Create Bid</a>
+
+<div class="section-container auto" data-section>
+  <section>
+    <p class="title" data-section-title><a href="#panel1">All Bids</a></p>
+    <div class="content" data-section-content>
+      <p>List of Bids.</p>
+    </div>
+  </section>
+</div>
+</div>
