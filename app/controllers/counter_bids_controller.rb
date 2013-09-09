@@ -44,7 +44,7 @@ class CounterBidsController < ApplicationController
 
     respond_to do |format|
       if @counter_bid.save
-        format.html { redirect_to @counter_bid, notice: 'Counter bid was successfully created.' }
+        format.html { redirect_to '/dashboard/dealer', notice: 'Counter bid was successfully created.' }
         format.json { render json: @counter_bid, status: :created, location: @counter_bid }
       else
         format.html { render action: "new" }

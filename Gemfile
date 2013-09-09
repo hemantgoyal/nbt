@@ -24,7 +24,7 @@ end
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
   gem 'execjs'
-
+  gem 'libv8', '~> 3.16.14.3'
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-rails' # you need this or you get an err
 

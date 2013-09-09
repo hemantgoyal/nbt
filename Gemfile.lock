@@ -357,6 +357,7 @@ DEPENDENCIES
   font-awesome-rails
   instagram
   jquery-rails (~> 2.0.0)
+  libv8 (~> 3.16.14.3)
   masonry-rails
   mini_magick
   mysql2
