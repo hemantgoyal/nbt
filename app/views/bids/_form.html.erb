@@ -10,57 +10,67 @@
       </ul>
     </div>
   <% end %>
-
+<div class="row">
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%# f.label :user_id %>
+    <%= f.hidden_field :user_id %>
   </div>
   <div class="field">
-    <%= f.label :buy %><br />
-    <%= f.check_box :buy %>
+    <div class="large-2 pull-1 columns">
+        
+    <%= f.check_box :buy, :style => "float:left;" %>
+    <%= f.label :buy%>
   </div>
+</div>
   <div class="field">
-    <%= f.label :lease %><br />
-    <%= f.check_box :lease %>
+  <div class="large-2 pull-1 columns">
+    <%= f.check_box :lease, :style => "float:left;" %>
+      <%= f.label :lease %>
   </div>
+</div>
   <div class="field">
-    <%= f.label :finance %><br />
-    <%= f.check_box :finance %>
+   <div class="large-2 pull-1 columns">
+    <%= f.check_box :finance, :style => "float:left;"  %>
+     <%= f.label :finance%>
   </div>
+</div>
+</div>
   <div class="field">
-    <%= f.label :monthly_payment %><br />
+    <%= f.label :monthly_payment %>
     <%= f.number_field :monthly_payment %>
   </div>
   <div class="field">
-    <%= f.label :down_payment %><br />
+    <%= f.label :down_payment %>
     <%= f.number_field :down_payment %>
   </div>
   <div class="field">
-    <%= f.label :no_of_month %><br />
+    <%= f.label :no_of_month %>
     <%= f.number_field :no_of_month %>
   </div>
   <div class="field">
-    <%= f.label :comment %><br />
+    <%= f.label :comment %>
     <%= f.text_field :comment %>
   </div>
   <div class="field">
-    <%= f.label :save_bid %><br />
+    <div class="large-1">
+    <%= f.label :save_bid, :style => "float:right;" %>
     <%= f.check_box :save_bid %>
   </div>
+</div>
   <div class="field">
-    <%= f.label :max_miles %><br />
+    <%= f.label :max_miles %>
     <%= f.text_field :max_miles %>
   </div>
   <div class="field">
-    <%= f.label :bid_time %><br />
+    <%= f.label :bid_time %>
     <%= f.text_field :bid_time %>
   </div>
   <div class="field">
-    <%= f.label :customer_id %><br />
-    <%= f.number_field :customer_id %>
+    <%#= f.label :customer_id %>
+    <%= f.hidden_field :customer_id %>
   </div>  
     <div class="field">
-    <%= f.label :dealer_id %><br />
+    <%= f.label :dealer_id %>
     <%# dealer_list = User.all.map { |user| [user.name, user.id] } %>
     <%# f.options_for_select(dealer_list) %>
     <%= f.select :dealer_id, :options_for_select => @users.collect{ |u| [u.name, u.id] } %>
