@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   ROLES = %w[customer dealer]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :provider, :uid, :name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :provider, :uid, :name, :dealer_id
   # attr_accessible :title, :body
   has_one :profile
   accepts_nested_attributes_for :profile
@@ -17,8 +17,9 @@ class User < ActiveRecord::Base
   attr_accessible :profile
   
 
-  has_many :bids
-#  has_many :counter_bids
+  has_many :created_bids, :foreign_key => 'customer_id', :class_name => "Bid"
+  has_many :customer_bids, :foreign_key => 'dealer_id', :class_name => "Bid"
+  has_many :counter_bids, :foreign_key => 'dealer_id', :class_name => "CounterBid"
 #  has_many :car_infos
 
   def update_with_password(params={})

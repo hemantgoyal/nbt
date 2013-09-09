@@ -55,6 +55,17 @@
     <%= f.label :bid_time %><br />
     <%= f.text_field :bid_time %>
   </div>
+  <div class="field">
+    <%= f.label :customer_id %><br />
+    <%= f.number_field :customer_id %>
+  </div>  
+    <div class="field">
+    <%= f.label :dealer_id %><br />
+    <%# dealer_list = User.all.map { |user| [user.name, user.id] } %>
+    <%# f.options_for_select(dealer_list) %>
+    <%= f.select :dealer_id, :options_for_select => @users.collect{ |u| [u.name, u.id] } %>
+  </div>  
+
   <div class="actions">
     <%= f.submit %>
   </div>

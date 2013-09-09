@@ -12,6 +12,8 @@ class CreateBids < ActiveRecord::Migration
       t.boolean :save_bid
       t.integer :max_miles
       t.integer :bid_time
+      t.integer :customer_id
+      t.integer :dealer_id
 
       t.timestamps
     end

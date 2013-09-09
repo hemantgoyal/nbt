@@ -16,6 +16,7 @@
     <p class="title" data-section-title><a href="#panel1">All Bids</a></p>
     <div class="content" data-section-content>
       <p>List of Bids.</p>
+      <p><% @bids.each do |f|%><%= f.no_of_month %> -- <%= f.comment %> <% end %></p>
     </div>
   </section>
 </div>

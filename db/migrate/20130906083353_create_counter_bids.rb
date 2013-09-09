@@ -14,6 +14,7 @@ class CreateCounterBids < ActiveRecord::Migration
       t.integer :max_miles
       t.integer :bid_time
       t.integer :confirmation_no
+      t.integer :dealer_id
 
       t.timestamps
     end
