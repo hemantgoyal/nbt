@@ -10,6 +10,49 @@
     <p class="title" data-section-title><a href="#panel1">Incoming Bids</a></p>
     <div class="content" data-section-content>
       <p>Content of Incoming Bids.</p>
+<table>
+  <tr>
+    <th>Buy</th>
+    <th>Lease</th>
+    <th>Finance</th>
+    <th>Monthly payment</th>
+    <th>Down payment</th>
+    <th>No of month</th>
+    <th>Comment</th>
+    <th>Save</th>
+    <th>Max miles</th>
+    <th>Bid time</th>
+    <th>Bid By</th>
+    <th></th>
+    <th></th>   
+  </tr>
+
+<% @bids.each do |bid| %>
+  <tr>
+    <td><%= bid.buy %></td>
+    <td><%= bid.lease %></td>
+    <td><%= bid.finance %></td>
+    <td><%= bid.monthly_payment %></td>
+    <td><%= bid.down_payment %></td>
+    <td><%= bid.no_of_month %></td>
+    <td><%= bid.comment %></td>
+    <td><%= bid.save %></td>
+    <td><%= bid.max_miles %></td>
+    <td><%= bid.bid_time %></td>
+    <td><%= bid.dealer_id.nil? ? "None" : bid.customer.name %></td>
+    <td><div id="counterModal" class="reveal-modal">
+  <h2>Counter Offer</h2>
+  <%= render 'counter_bids/form', :bid => bid, :remote => true %>  
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<%= link_to "Create Counter Bid", "#", :class => "small button right", :data => {:reveal_id => "counterModal"} %>
+</td>
+    <td></td>    
+  </tr>
+<% end %>
+</table>
+
     </div>
   </section>
   <section>

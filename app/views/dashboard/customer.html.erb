@@ -15,9 +15,91 @@
   <section>
     <p class="title" data-section-title><a href="#panel1">All Bids</a></p>
     <div class="content" data-section-content>
+      
       <p>List of Bids.</p>
-      <p><% @bids.each do |f|%><%= f.no_of_month %> -- <%= f.comment %> <% end %></p>
+      <table>
+  <tr>
+    <th>Buy</th>
+    <th>Lease</th>
+    <th>Finance</th>
+    <th>Monthly payment</th>
+    <th>Down payment</th>
+    <th>No of month</th>
+    <th>Comment</th>
+    <th>Save</th>
+    <th>Max miles</th>
+    <th>Bid time</th>
+    <th>Bid To</th>
+    <th></th>
+    <th></th>   
+  </tr>
+
+<% @bids.each do |bid| %>
+  <tr>
+    <td><%= bid.buy %></td>
+    <td><%= bid.lease %></td>
+    <td><%= bid.finance %></td>
+    <td><%= bid.monthly_payment %></td>
+    <td><%= bid.down_payment %></td>
+    <td><%= bid.no_of_month %></td>
+    <td><%= bid.comment %></td>
+    <td><%= bid.save %></td>
+    <td><%= bid.max_miles %></td>
+    <td><%= bid.bid_time %></td>
+    <td><%= bid.dealer_id.nil? ? "None" : bid.dealer.name %></td>
+    <td></td>
+    <td></td>    
+  </tr>
+<% end %>
+</table>
+
+
+    
     </div>
   </section>
+    <section>
+    <p class="title" data-section-title><a href="#panel1">Incoming Offers</a></p>
+    <div class="content" data-section-content>
+      
+      <p>List of Offers.</p>
+            <table>
+  <tr>
+    <th>Buy</th>
+    <th>Lease</th>
+    <th>Finance</th>
+    <th>Monthly payment</th>
+    <th>Down payment</th>
+    <th>No of month</th>
+    <th>Comment</th>
+    <th>Save</th>
+    <th>Max miles</th>
+    <th>Bid time</th>
+    <th>Bid To</th>
+    <th></th>
+    <th></th>   
+  </tr>
+
+<% @counter_offers.each do |offer| %>
+  <tr>
+    <td><%= offer.buy %></td>
+    <td><%= offer.lease %></td>
+    <td><%= offer.finance %></td>
+    <td><%= offer.monthly_payment %></td>
+    <td><%= offer.down_payment %></td>
+    <td><%= offer.no_of_month %></td>
+    <td><%= offer.comment %></td>
+    <td><%= offer.save %></td>
+    <td><%= offer.max_miles %></td>
+    <td><%= offer.bid_time %></td>
+    <td><%= offer.dealer_id.nil? ? "None" : offer.dealer.name %></td>
+    <td></td>
+    <td></td>    
+  </tr>
+<% end %>
+</table>
+
+    </div>
+  </section>
+
 </div>
 </div>
