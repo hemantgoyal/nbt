@@ -44,6 +44,8 @@ class BidsController < ApplicationController
 
     respond_to do |format|
       if @bid.save
+        @user = User.where(:id => @bid.dealer_id).first
+        Emailer.bid_for_dealer(@user).deliver
         format.html { redirect_to '/dashboard/customer', notice: 'Bid was successfully created.' }
         format.json { render json: @bid, status: :created, location: @bid }
       else
