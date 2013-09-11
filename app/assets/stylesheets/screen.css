@@ -503,6 +503,11 @@ margin-right: 20px;
   margin-left: 30px;
   }
   
+.dash_body {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+  
 #footer_relative {
   position: relative;
   bottom: 0px;
@@ -513,3 +518,21 @@ margin-right: 20px;
 .height_dash {
 
   }
+  
+.dealer_bid_item {
+  border-bottom: 1px solid #dddddd;
+  width: 100;
+  }
+
+.payment_details {
+  border-right: 1px solid #dddddd;
+}
+
+.customer_information {
+  border-right: 1px solid #dddddd;
+  
+}
+
+.accept_bid_column {
+  text-align: right;
+}

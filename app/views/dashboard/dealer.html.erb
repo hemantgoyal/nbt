@@ -5,55 +5,34 @@
 <h1>Dashboard</h1>
 </div>
 
-<div class="section-container auto" data-section>
+<div class="section-container auto dash_body" data-section>
   <section>
     <p class="title" data-section-title><a href="#panel1">Incoming Bids</a></p>
-    <div class="content" data-section-content>
+    <div class="content left large-12" data-section-content>
       <p>Content of Incoming Bids.</p>
-<table>
-  <tr>
-    <th>Buy</th>
-    <th>Lease</th>
-    <th>Finance</th>
-    <th>Monthly payment</th>
-    <th>Down payment</th>
-    <th>No of month</th>
-    <th>Comment</th>
-    <th>Save</th>
-    <th>Max miles</th>
-    <th>Bid time</th>
-    <th>Bid By</th>
-    <th></th>
-    <th></th>   
-  </tr>
+      <% @bids.each do |bid| %>
+      <div class="large-12 columns dealer_bid_item">
+        <div class="large-4 columns payment_details">
+            Payment Details<br/>
+            Monthly Payment:<%= bid.monthly_payment %> <br/>
+            Down Payment:<%= bid.down_payment %><br/>
+            Months:<%= bid.no_of_month %> <br/>
+            Total Drive:<%= bid.max_miles %> <br/>
+    
+          </div>
+          <div class="large-4 columns customer_information">
+          Customer Information <br/>
+          Credit Score: <br/>
+          Comments:<%= bid.comment %> <br/>
+          </div>
+          <div class="large-4 columns accept_bid_column">
+            <a href="#" class="small button"> Accept Bid</a>
+          </div>
+          <% end %>
 
-<% @bids.each do |bid| %>
-  <tr>
-    <td><%= bid.buy %></td>
-    <td><%= bid.lease %></td>
-    <td><%= bid.finance %></td>
-    <td><%= bid.monthly_payment %></td>
-    <td><%= bid.down_payment %></td>
-    <td><%= bid.no_of_month %></td>
-    <td><%= bid.comment %></td>
-    <td><%= bid.save %></td>
-    <td><%= bid.max_miles %></td>
-    <td><%= bid.bid_time %></td>
-    <td><%= bid.dealer_id.nil? ? "None" : bid.customer.name %></td>
-    <td><div id="counterModal" class="reveal-modal">
-  <h2>Counter Offer</h2>
-  <%= render 'counter_bids/form', :bid => bid, :remote => true %>  
-  <a class="close-reveal-modal">&#215;</a>
-</div>
-
-<%= link_to "Create Counter Bid", "#", :class => "small button right", :data => {:reveal_id => "counterModal"} %>
-</td>
-    <td></td>    
-  </tr>
-<% end %>
-</table>
-
-    </div>
+        </div>
+      </div>
+      
   </section>
   <section>
     <p class="title" data-section-title><a href="#panel2">Accepted Bids</a></p>
