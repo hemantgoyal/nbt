@@ -44,6 +44,8 @@ class CounterBidsController < ApplicationController
 
     respond_to do |format|
       if @counter_bid.save
+        #@user = User.where(:id => @bid.dealer_id).first
+        #Emailer.counter_bid_to_customer(@user).deliver
         format.html { redirect_to '/dashboard/dealer', notice: 'Counter bid was successfully created.' }
         format.json { render json: @counter_bid, status: :created, location: @counter_bid }
       else
