@@ -40,6 +40,10 @@
           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
           <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
+        
+          <% if user_signed_in? %>
+            <%= link_to 'Logout', '/users/sign_out', :class => "button secondary radius right pull-1" %>        
+          <% else %>
 
         <!--End mc_embed_signup-->
         <section class="right large-4 small-12 push-1">
@@ -111,7 +115,10 @@
               <li class="divider"></li>
             </ul>
           -->
-        </section></nav>
+
+        </section>
+                  <% end %>
+      </nav>
       </div>
     </div>
        <p class="notice"><%= notice %></p>
