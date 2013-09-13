@@ -1,4 +1,5 @@
-    <div class="field">
+<% if user_signed_in? %>
+  <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
@@ -6,14 +7,17 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
+<% end %>
   <div class="field">
     <%= f.label :dob %><br />
     <%= f.datetime_select :dob %>
   </div>
+  <% if user_signed_in? %>
   <div class="field">
     <%= f.label :image %><br />
     <%= f.text_field :image %>
   </div>
+  <% end %>
   <div class="field">
     <%= f.label :street %><br />
     <%= f.text_field :street %>
@@ -34,6 +38,7 @@
     <%= f.label :phone %><br />
     <%= f.text_field :phone %>
   </div>
+  <% if user_signed_in? %>
   <div class="field">
     <%= f.label :fax %><br />
     <%= f.text_field :fax %>
@@ -42,3 +47,4 @@
     <%= f.label :social_security_no %><br />
     <%= f.text_field :social_security_no %>
   </div>
+<% end %>
