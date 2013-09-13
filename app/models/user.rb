@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   ROLES = %w[customer dealer]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :provider, :uid, :name, :dealer_id, :city, :dob, :phone, :state, :street, :zipcode
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :provider, :uid, :name, :dealer_id, :city, :dob, :phone, :state, :street, :zipcode, :terms
   # attr_accessible :title, :body
   has_one :profile
   accepts_nested_attributes_for :profile
