@@ -3,14 +3,14 @@ require "bundler/capistrano"
 
 server "192.241.225.72", :web, :app, :db, primary: true
 
-set :application, "nabthat"
+set :application, "nbt"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@gitlab.com:anbublacky/#{application}.git"
+set :repository, "git@github.com:hemantgoyal/#{application}.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
