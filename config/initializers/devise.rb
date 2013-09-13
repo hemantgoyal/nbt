@@ -20,7 +20,7 @@ Devise.setup do |config|
   config.router_name = :main_app
   require 'omniauth-facebook'
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
-    config.omniauth :facebook, '181236315390623', '7d67602d91276da383dbb446150e790f'
+  config.omniauth :facebook, '181236315390623', '7d67602d91276da383dbb446150e790f'
 
   require "omniauth-google-oauth2"
   config.omniauth :google_oauth2, "1016231381644.apps.googleusercontent.com", "0omqUIy5FtB9OrG9PcwvF-fq", { access_type: "offline", approval_prompt: "" }

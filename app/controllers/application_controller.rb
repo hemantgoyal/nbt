@@ -9,4 +9,9 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def signed_in_root_path(scope_or_resource)
+    dashboard_dealer_path
+  end
+
+  
 end
