@@ -8,35 +8,35 @@
     <%= f.text_field :last_name %>
   </div>
 <% end %>
-  <div class="field">
-    <%= f.label :dob %><br />
-    <%= f.datetime_select :dob %>
+  <div class="field large-9 columns left left_50px push-1 ">
+    <%# f.label :Date_Of_Birth %><br />
+    <%= f.date_select :dob, :prompt => { :day => 'Select date', :month => 'Select month', :year => 'Select year' } %>
   </div>
   <% if user_signed_in? %>
-  <div class="field">
-    <%= f.label :image %><br />
+  <div class="field large-9 columns left left_50px">
+    <%# f.label :image %><br />
     <%= f.text_field :image %>
   </div>
   <% end %>
-  <div class="field">
-    <%= f.label :street %><br />
-    <%= f.text_field :street %>
+  <div class="field large-9 columns left left_50px">
+    <%# f.label :street %><br />
+    <%= f.text_field :street,:placeholder => "Street", :class => "sign_up_input" %>
   </div>
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
+  <div class="field large-9 columns left left_50px">
+    <%# f.label :city %><br />
+    <%= f.text_field :city,:placeholder => "City", :class => "sign_up_input" %>
   </div>
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
+  <div class="field large-9 columns left left_50px">
+    <%# f.label :state %><br />
+    <%= f.text_field :state,:placeholder => "State", :class => "sign_up_input" %>
   </div>
-  <div class="field">
-    <%= f.label :zipcode %><br />
-    <%= f.text_field :zipcode %>
+  <div class="field large-9 columns left left_50px">
+    <%# f.label :zipcode %><br />
+    <%= f.text_field :zipcode,:placeholder => "Zip Code", :class => "sign_up_input" %>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+  <div class="field large-9 columns left left_50px">
+    <%# f.label :phone %><br />
+    <%= f.text_field :phone,:placeholder => "Phone", :class => "sign_up_input" %>
   </div>
   <% if user_signed_in? %>
   <div class="field">
