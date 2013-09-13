@@ -8,34 +8,34 @@
     <%= f.text_field :last_name %>
   </div>
 <% end %>
-  <div class="field large-9 columns left left_50px push-1 ">
-    <%# f.label :Date_Of_Birth %><br />
-    <%= f.date_select :dob, :prompt => { :day => 'Select date', :month => 'Select month', :year => 'Select year' } %>
+  <div class="large-7 columns left left_25px ">
+    <%# f.label :Date_Of_Birth %>
+    <%= f.date_select :dob, :prompt => { :day => 'Date', :month => 'Month', :year => 'Year' } %>
   </div>
   <% if user_signed_in? %>
-  <div class="field large-9 columns left left_50px">
-    <%# f.label :image %><br />
+  <div class="large-7 columns left ">
+    <%# f.label :image %>
     <%= f.text_field :image %>
   </div>
   <% end %>
-  <div class="field large-9 columns left left_50px">
-    <%# f.label :street %><br />
+  <div class="large-7 columns left ">
+    <%# f.label :street %>
     <%= f.text_field :street,:placeholder => "Street", :class => "sign_up_input" %>
   </div>
-  <div class="field large-9 columns left left_50px">
-    <%# f.label :city %><br />
+  <div class="large-7 columns left ">
+    <%# f.label :city %>
     <%= f.text_field :city,:placeholder => "City", :class => "sign_up_input" %>
   </div>
-  <div class="field large-9 columns left left_50px">
-    <%# f.label :state %><br />
+  <div class="large-7 columns left ">
+    <%# f.label :state %>
     <%= f.text_field :state,:placeholder => "State", :class => "sign_up_input" %>
   </div>
-  <div class="field large-9 columns left left_50px">
-    <%# f.label :zipcode %><br />
+  <div class="large-7 columns left ">
+    <%# f.label :zipcode %>
     <%= f.text_field :zipcode,:placeholder => "Zip Code", :class => "sign_up_input" %>
   </div>
-  <div class="field large-9 columns left left_50px">
-    <%# f.label :phone %><br />
+  <div class="large-7 columns left ">
+    <%# f.label :phone %>
     <%= f.text_field :phone,:placeholder => "Phone", :class => "sign_up_input" %>
   </div>
   <% if user_signed_in? %>

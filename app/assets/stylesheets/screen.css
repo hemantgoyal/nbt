@@ -443,7 +443,11 @@ margin-right: 20px;
   color: #777;
 }
 
-.error_50px {
+.left_25px {
+  margin-left: 25px;
+}
+
+.left_50px {
   margin-left: 50px;
 }
 
@@ -464,9 +468,9 @@ margin-right: 20px;
 
 .sign_up_input {
   border-radius: 4px;
-  height: 35px !important;
+  height: 25px !important;
   font-size: 15px !important;
-  margin-left: 50px !important;
+  margin-left: 25px !important;
 }
 
 .sign_up_form {
@@ -478,9 +482,9 @@ margin-right: 20px;
   background-image: -ms-linear-gradient(90deg , #ECFAFF 0%, white 100%);
   background-image: linear-gradient(360deg , #FFFFFF 0%, rgb(233,233,233) 100%);
   margin-bottom: 30px;
-  padding-top: 25px;
-  padding-left: 25px;
-}
+  padding-top: 5px;
+  margin-right: 30px;
+ }
 .sign_up_page {
   padding-top: 30px;
   margin-bottom: 150px;
@@ -490,7 +494,7 @@ margin-right: 20px;
 }
 
 #user_role {
-  height: 35px;
+  height: 25px;
   font-size: 15px;
   color: #777;
   }
@@ -500,7 +504,7 @@ margin-right: 20px;
 }  
   
 .dash_header {
-  margin-top: 10px;
+  margin-top: 1px;
   background-color: #285EAE;
   color: white !important;
   }
@@ -539,7 +543,6 @@ margin-right: 20px;
   border-right: 1px solid #dddddd;
   min-height: 112px; 
 }
-
 .accept_bid_column {
   padding-top: 30px;
   text-align: right;
@@ -553,8 +556,8 @@ margin-right: 20px;
   padding-left: 20px;
 }
  
-#user_profile_attributes_dob_1i { width: 100px; height: 35px;}
-#user_profile_attributes_dob_2i { width: 190px; height: 35px;}
-#user_profile_attributes_dob_3i { width: 130px; height: 35px;}
+#user_profile_attributes_dob_1i { width: 60px; height: 25px;}
+#user_profile_attributes_dob_2i { width: 152px; height: 25px;}
+#user_profile_attributes_dob_3i { width: 60px; height: 25px;}
 
-  
+.or_image img { height: 525px;}
