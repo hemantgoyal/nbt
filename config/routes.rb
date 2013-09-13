@@ -27,6 +27,8 @@ Nabblog1::Application.routes.draw do
 
 
   get "home/index"
+
+  get "home/privacy_policy"
   
   get '/auth/:provider/callback', to: 'sessions#create'
 
