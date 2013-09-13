@@ -1,0 +1,56 @@
+<div class="sign_up_page">
+  <div class="dash_header">
+
+    <h1>Member Registration</h1>
+  </div>
+<div class="sign_up_header">
+  <h4 class="left_20" style="color:#0066CC">Create an account now !</h4>
+  <h6 class="left_20" style="color:#0066CC">Your First Bid is Free !</h6>
+  </div>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:data => {:abide => ''}}) do |f| %>
+  <%= devise_error_messages! %>
+  
+  <div class="sign_up_form large-5 left_20">
+    <h5 style="margin-left: 35px">Create Nabthat Account</h5>
+    <div class="large-7 columns left ">
+  <%= f.text_field :name, :placeholder => "Name", :class => "sign_up_input", :required => '' %><small class="error error_50px large-12">Please enter your name </small></div>
+    
+<div class="large-7 columns left ">
+  <%= f.email_field :email, :placeholder => "Email address", :class => "sign_up_input", :required => '' %><small class="error error_50px large-12">Please enter valid email address</small></div>
+
+  <div class="large-7 columns left ">
+  <%= f.password_field :password, :placeholder => "Password", :class => "sign_up_input", :required => '' %><small class="error error_50px large-12">Password should contain upper, lower and digits</small></div>
+  
+  <div class="large-7 columns left ">
+  <%= f.password_field :password_confirmation, :placeholder => "Confirm Password", :class => "sign_up_input", :required => '' %><small class="error error_50px large-12">Password should contain upper, lower and digits</small></div>
+  
+        <% @user.build_profile  unless @user.profile %>
+        <%= f.fields_for :profile, @user.profile do |prof| %>
+          <%= render "profile", :f => prof %>
+        <% end %>
+
+  <div class="large-7 columns left left_25px">
+  <%= f.collection_select :role, User::ROLES, :to_s, :humanize %></div>
+<<<<<<< HEAD
+
+
+<div class="large-7 left"><%= f.submit "Sign up", :class => "medium button success radius large-8 push-3" %></div>
+=======
+  <div class="large-9 columns left left_50px push-1">
+  <%= f.check_box :terms %> I Agree <%= link_to "terms and condition", home_privacy_policy_path %>
+</div>
+<div class="large-7 left"><%= f.submit "Sign up", :class => "medium button success radius large-8 push-6" %></div>
+>>>>>>> 37da8d4d7750cab681590d341dc36407bab299d6
+<% end %>
+
+<div class="large-8 left">
+
+<%# render "links" %> </div>
+</div>
+<span class="or_image">
+<%= image_tag('or1.png')%>
+</span>
+<div class="large-3 right pull-1" style="margin-top: 200px">
+<%= render "social_links" %></div>
+</div>
