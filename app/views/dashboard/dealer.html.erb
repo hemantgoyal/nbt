@@ -2,55 +2,53 @@
 <div class="large-12 left height_dash ">
   <div class="dash_header">
 
-<h1>Dashboard</h1>
-</div>
+    <h1>Dashboard</h1>
+  </div>
 
-<div class="section-container auto dash_body" data-section>
-  <section>
-    <p class="title" data-section-title><a href="#panel1">Incoming Bids</a></p>
- 
-    <div class="content left large-12" data-section-content>
-      <div class="incoming_bid_header">
-      <p>Content of Incoming Bids.</p>
-    </div>
-      <% @bids.each do |bid| %>
-      <div class="large-12 columns incom_bid_body dealer_bid_item">
-        <div class="large-4 columns payment_details">
+  <div class="section-container auto dash_body" data-section>
+    <section>
+      <p class="title" data-section-title><a href="#panel1">Incoming Bids</a></p>
+      <div class="content left large-12" data-section-content>
+        <div class="incoming_bid_header">
+          <p>Content of Incoming Bids.</p>
+        </div>
+        <% @bids.each do |bid| %>
+        <div class="large-12 columns incom_bid_body dealer_bid_item">
+          <div class="large-4 columns payment_details">
             Payment Details<br/>
             Monthly Payment:<%= bid.monthly_payment %> <br/>
             Down Payment:<%= bid.down_payment %><br/>
             Months:<%= bid.no_of_month %> <br/>
             Total Drive:<%= bid.max_miles %> <br/>
-    
+
           </div>
           <div class="large-4 columns customer_information">
-          Customer Information <br/>
-          Credit Score: <br/>
-          Comments:<%= bid.comment %> <br/>
+            Customer Information <br/>
+            Credit Score: <br/>
+            Comments:<%= bid.comment %> <br/>
           </div>
           <div class="large-4 columns accept_bid_column">
             <a href="#" class="small button"> Accept Bid</a>
           </div>
-          <% end %>
+        </div>
+        <% end %>
 
-      
       </div>
+
+    </section>
+    <section>
+      <p class="title" data-section-title><a href="#panel2">Accepted Bids</a></p>
+      <div class="content" data-section-content>
+        <p>Content of Accepted Bids.</p>
       </div>
-      
-  </section>
-  <section>
-    <p class="title" data-section-title><a href="#panel2">Accepted Bids</a></p>
-    <div class="content" data-section-content>
-      <p>Content of Accepted Bids.</p>
-    </div>
-  </section>
-  <section>
-    <p class="title" data-section-title><a href="#panel3">Pending Bids</a></p>
-    <div class="content" data-section-content>
-      <p>Content of Pending bids.</p>
-    </div>
-  </section>
-  
-</div>
+    </section>
+    <section>
+      <p class="title" data-section-title><a href="#panel3">Pending Bids</a></p>
+      <div class="content" data-section-content>
+        <p>Content of Pending bids.</p>
+      </div>
+    </section>
+
+  </div>
 
 </div>

@@ -43,6 +43,7 @@
         
           <% if user_signed_in? %>
             <%= link_to 'Logout', '/users/sign_out', :class => "button secondary radius right pull-1" %>
+            <%= link_to 'Account', '/users/edit', :class => "button secondary radius right pull-1" %>
             <% if current_user.role == "customer" || current_user.role == "" %>
               <%= link_to 'Dashboard', '/dashboard/customer', :class => "button secondary radius right pull-1" %>            
             <% else %>
