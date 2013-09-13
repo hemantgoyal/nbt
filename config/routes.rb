@@ -18,7 +18,9 @@ Nabblog1::Application.routes.draw do
 
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-
+  devise_scope :user do
+   root :to => 'devise/registrations#new'
+  end
   mount Ckeditor::Engine => '/ckeditor'
 
   resources :maillinglists
@@ -34,7 +36,7 @@ Nabblog1::Application.routes.draw do
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
-  mount Refinery::Core::Engine, :at => '/'
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -85,8 +87,8 @@ Nabblog1::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
 
+  mount Refinery::Core::Engine, :at => '/'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
