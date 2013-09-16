@@ -8,9 +8,9 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :street
       t.string :city
       t.string :state
-      t.integer :zipcode
-      t.integer :phone
-      t.integer :fax
+      t.integer :zipcode, :limit => 8
+      t.integer :phone, :limit => 8
+      t.integer :fax, :limit => 8
       t.integer :social_security_no
       t.integer :user_id
 

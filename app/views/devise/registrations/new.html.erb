@@ -32,8 +32,8 @@
 
   <div class="large-7 columns left left_25px">
   <%= f.collection_select :role, User::ROLES, :to_s, :humanize %></div>
-  <div class="large-9 columns left left_50px push-1">
-  <%= f.check_box :terms %> I Agree <%= link_to "terms and condition", home_privacy_policy_path %>
+  <div class="large-9 columns left left_50px push-1 terms_service">
+  <%= f.check_box :terms %> I to agree Nabthat <%= link_to "Terms of Service", home_privacy_policy_path %>
 </div>
 <div class="large-7 left"><%= f.submit "Sign up", :class => "medium button success radius large-8 push-6" %></div>
 <% end %>

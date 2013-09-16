@@ -568,3 +568,11 @@ margin-right: 20px;
 #user_profile_attributes_dob_3i { width: 60px; height: 25px;}
 
 .or_image img { height: 525px;}
+
+.terms_service a{
+  color: #15c !important;
+}
+
+.terms_service a:hover {
+    text-decoration: underline;
+  }

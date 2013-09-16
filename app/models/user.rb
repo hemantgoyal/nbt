@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  
+
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable, :omniauth_providers => [:facebook, :google_oauth2, :twitter], :authentication_keys => [:email]
-        
+
 
   ROLES = %w[customer dealer]
 
@@ -15,12 +15,12 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :profile
   attr_accessible :profile_attributes, :city, :dob, :fax, :first_name, :image, :last_name, :phone, :social_security_no, :state, :street, :zipcode
   attr_accessible :profile
-  
+
 
   has_many :created_bids, :foreign_key => 'customer_id', :class_name => "Bid"
   has_many :customer_bids, :foreign_key => 'dealer_id', :class_name => "Bid"
   has_many :counter_bids, :foreign_key => 'dealer_id', :class_name => "CounterBid"
-#  has_many :car_infos
+  #  has_many :car_infos
 
   def update_with_password(params={})
     current_password = params.delete(:current_password)
@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
     end
 
     result =  if params[:password].blank? || valid_password?(current_password)
-    update_attributes(params)
+      update_attributes(params)
     else
       self.attributes = params
       self.valid?
@@ -42,8 +42,13 @@ class User < ActiveRecord::Base
     clean_up_passwords
     result
   end
-  
-def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
+
+  def confirm!
+    welcome_message
+    super
+  end
+
+  def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     if user
       return user
@@ -53,20 +58,20 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
         return registered_user
       else
         user = User.create(name:auth.extra.raw_info.name,
-                            provider:auth.provider,
-                            uid:auth.uid,
-                            email:auth.info.email,
-                            password:Devise.friendly_token[0,20],
-                          )
-         user.skip_confirmation!
-         user
+        provider:auth.provider,
+        uid:auth.uid,
+        email:auth.info.email,
+        password:Devise.friendly_token[0,20],
+        )
+        user.skip_confirmation!
+        user
       end
-       
+
     end
-end
-  
-  
-def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+  end
+
+
+  def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
     user = User.where(:provider => access_token.provider, :uid => access_token.uid ).first
     if user
@@ -77,41 +82,41 @@ def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
         return registered_user
       else
         user = User.create(name: data["name"],
-          provider:access_token.provider,
-          email: data["email"],
-          uid: access_token.uid ,
-          password: Devise.friendly_token[0,20],
+        provider:access_token.provider,
+        email: data["email"],
+        uid: access_token.uid ,
+        password: Devise.friendly_token[0,20],
         )
         user.skip_confirmation!
         user.save!
         user
-        
-      end
-   end
-end
 
-def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
- 
-  user = User.where(:provider => auth.provider, :uid => auth.uid).first
-  if user
-    return user
-  else
-    registered_user = User.where(:email => auth.uid + "@twitter.com").first
-    if registered_user
-      return registered_user
+      end
+    end
+  end
+
+  def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
+
+    user = User.where(:provider => auth.provider, :uid => auth.uid).first
+    if user
+      return user
     else
-      user = User.create(name:auth.info.name,
+      registered_user = User.where(:email => auth.uid + "@twitter.com").first
+      if registered_user
+        return registered_user
+      else
+        user = User.create(name:auth.info.name,
         provider:auth.provider,
         uid:auth.uid,
         email:auth.uid+"@twitter.com",
         password:Devise.friendly_token[0,20],
-      )
-      user.skip_confirmation!
-      user.save!
-      user
+        )
+        user.skip_confirmation!
+        user.save!
+        user
+      end
     end
   end
-end
 
   def self.new_with_session(params, session)
     super.tap do |user|
@@ -120,5 +125,12 @@ end
       end
     end
   end
+  
+  private
+  
+  def welcome_message
+    UserMailer.welcome_message(self).deliver
+  end
+
 
 end

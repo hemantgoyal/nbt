@@ -10,7 +10,7 @@
 <% end %>
   <div class="large-7 columns left left_25px ">
     <%# f.label :Date_Of_Birth %>
-    <%= f.date_select :dob, :prompt => { :day => 'Date', :month => 'Month', :year => 'Year' } %>
+    <%= f.date_select :dob, :prompt => { :day => 'Date', :month => 'Month', :year => 'Year' }, :start_year => Time.now.year - 100, :end_year => Time.now.year - 18 %>
   </div>
   <% if user_signed_in? %>
   <div class="large-7 columns left ">
