@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   end
 
   def confirm!
-    welcome_message
+    Emailer.welcome_message(self).deliver
     super
   end
 
@@ -126,11 +126,5 @@ class User < ActiveRecord::Base
     end
   end
   
-  private
-  
-  def welcome_message
-    UserMailer.welcome_message(self).deliver
-  end
-
 
 end

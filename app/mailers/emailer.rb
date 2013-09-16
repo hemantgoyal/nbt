@@ -9,4 +9,9 @@ class Emailer < ActionMailer::Base
     @user = user
     mail(:to => "<#{user.email}>", :subject => "Counter Bid for you")
   end
+  def welcome_message(user)
+    @user = user
+    mail(:to => "<#{user.email}>", :subject => "Nbathat welcomes you")
+  end
+
 end
