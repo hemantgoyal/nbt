@@ -4,6 +4,7 @@
     <h1>Member Registration</h1>
   </div>
 <div class="sign_up_header">
+  <h6 class="right"><%= link_to "Already a member","/users/sign_in",{:style=>'color:#0066CC !important;'}%></h6>
   <h4 class="left_20" style="color:#0066CC">Create an account now !</h4>
   <h6 class="left_20" style="color:#0066CC">Your First Bid is Free !</h6>
   </div>
@@ -33,9 +34,9 @@
   <div class="large-7 columns left left_25px">
   <%= f.collection_select :role, User::ROLES, :to_s, :humanize %></div>
   <div class="large-9 columns left left_50px push-1 terms_service">
-  <%= f.check_box :terms %> I to agree Nabthat <%= link_to "Terms of Service", home_privacy_policy_path %>
+  <%= f.check_box :terms %> I agree to Nabthat <%= link_to "Terms of Service", home_privacy_policy_path %>
 </div>
-<div class="large-7 left"><%= f.submit "Sign up", :class => "medium button success radius large-8 push-6" %></div>
+<div class="large-5 left"><%= f.submit "Sign up", :class => "medium button success radius large-8 push-6" %></div>
 <% end %>
 
 <div class="large-8 left">
@@ -45,6 +46,6 @@
 <span class="or_image">
 <%= image_tag('or1.png')%>
 </span>
-<div class="social_links large-3 right pull-1" style="margin-top: 200px">
+<div class="social_links large-3 right pull-3" style="margin-top: 200px">
 <%= render "social_links" %></div>
 </div>

@@ -30,7 +30,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
   <div class="container  home-border">
-    <div class="attached contain-to-grid sticky">
+    <div class="attached contain-to-grid">
       <nav class="top-bar " style="margin-bottom: 0px;">
         <ul class="title-area">
           <!-- Title Area -->
@@ -47,7 +47,7 @@
             <% if current_user.role == "customer" || current_user.role == "" %>
               <%= link_to 'Dashboard', '/dashboard/customer', :class => "button secondary right pull-1" %>            
             <% else %>
-              <%= link_to 'Dashboard', '/dashboard/customer', :class => "button secondary right pull-1" %> 
+              <%= link_to 'Dashboard', '/dashboard/dealer', :class => "button secondary right pull-1" %> 
             <% end%>
               
           <% else %>
@@ -113,6 +113,7 @@
               <li class="divider"></li>
               <li class=""><a href="">Find Cars</a></li>
               <li class="divider"></li>
+              
               <li class=""><a href="">Find Dealers</a></li>
               <li class="divider"></li>
               <li class=""><a href="">Contacts</a></li>
