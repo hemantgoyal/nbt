@@ -129,7 +129,7 @@ class User < ActiveRecord::Base
   private
   
   def welcome_message
-    UserMailer.welcome_message(self).deliver
+    Emailer.welcome_message(self).deliver
   end
 
 
